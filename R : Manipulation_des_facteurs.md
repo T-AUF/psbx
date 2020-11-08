@@ -155,7 +155,7 @@ H F
  
  
  
-En savoir plus : voici les sujets qui vous pouvez approfondir par rapport à ce tutorat.
+En savoir plus : voici les sujets que vous pouvez approfondir par rapport à ce tutorat.
 - Voir la documentation sur les facteurs en ligne : [LINK](https://sodocumentation.net/fr/r/topic/1104/facteurs)
 - Les vecteurs : [LINK](https://sodocumentation.net/fr/r/topic/1088/creation-de-vecteurs)
  
