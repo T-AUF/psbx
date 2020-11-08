@@ -20,7 +20,7 @@ Pour illustrer le fonctionnement des facteurs, nous allons créer un facteur ave
 
 **3 fonctions pour créer les facteurs**
  
- - **1.	La fonction factor**
+ - **1.	La fonction `factor`**
 
 `factor` permet de créer un facteur en définissant directement les différents éléments du facteur.
 
@@ -32,7 +32,7 @@ sexe
 Levels : F H
 ```
 
- - **2.	La fonction as.factor**
+ - **2.	La fonction `as.factor`**
 
 ``` 
 salto <- c(1:5,5:1)
@@ -46,7 +46,7 @@ salto.f
 Levels: 1 2 3 4 5
 ```
 
- - **3.	La fonction ordered**
+ - **3.	La fonction `ordered`**
 
 La fonction  `ordered`  va quant à elle nous permettre de créer des facteurs ordonnés
 
@@ -89,7 +89,7 @@ Levels: 1 2 3 4 5 6
 ```
 ### Renommer les modalités d’un facteur
 
-On peut renommer le facteur en utilisant la fonction ```levels```
+On peut renommer le facteur en utilisant la fonction `levels`
 
 ```
 levels(sexe) <- c("Femme","Homme")
@@ -101,7 +101,7 @@ Levels: Femme Homme
 
 ### Modifier les valeurs d’un facteur
 
-On peut modifier la valeur d’un facteur facilement par indexation comme pour un vecteur avec la fonction ```levels```
+On peut modifier la valeur d’un facteur facilement par indexation comme pour un vecteur avec la fonction `levels`
 
 ```
 levels(sexe) 
@@ -121,7 +121,7 @@ Levels: 1 2 3 4 5 6
 
 ### L’ordre des niveaux
 
-Par défaut, les niveaux d’un facteur nouvellement créés sont classés par ordre alphanumérique croissant ou selon l’ordre qui figure dans l’option ```levels```. Cet ordre est utilisé chaque fois que le facteur est employé.
+Par défaut, les niveaux d’un facteur nouvellement créés sont classés par ordre alphanumérique croissant ou selon l’ordre qui figure dans l’option `levels`. Cet ordre est utilisé chaque fois que le facteur est employé.
 
 ```
 sexe <- factor(c("H", "H", "F", "H", "H", "F", "F", "F"))
@@ -135,7 +135,7 @@ F H
 4 4
 ```
 
-On peut modifier l’ordre des niveaux d’un facteur existant en utilisant l’option ```levels```:
+On peut modifier l’ordre des niveaux d’un facteur existant en utilisant l’option `levels`:
 
 ```
 sexe <- factor(sexe, levels = c("H", "F"))
@@ -150,8 +150,8 @@ H F
 
 ----------------------------------------------------------------------
 #### **Ce qu'il faut retenir** :
-- 3 moyens de créer des facteurs : ```factor```, ```as.factor``` et ```ordered```
-- On peut modifier, renommer les modalités du facteur avec la fonction ```levels```
+- 3 moyens de créer des facteurs : `factor`, `as.factor` et `ordered`
+- On peut modifier, renommer les modalités du facteur avec la fonction `levels`
  
  
  
