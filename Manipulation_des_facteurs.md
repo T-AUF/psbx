@@ -125,7 +125,7 @@ H F
 
 ----------------------------------------------------------------------
 #### **Ce qu'il faut retenir** :
-- 3 moyens de créer des facteurs : ```factor```, ```as.factor``` et ```orderd```
+- 3 moyens de créer des facteurs : ```factor```, ```as.factor``` et ```ordered```
 - On peut modifier, renommer les modalités du facteur avec la fonction ```levels```
  
  
