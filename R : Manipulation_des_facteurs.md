@@ -65,7 +65,7 @@ Levels: débutant < moyen < champion
 ### Niveaux d’un facteur
 
 Les facteurs prennent leurs valeurs dans un ensemble de modalités prédéfinies (niveaux), et ne peuvent en prendre d’autres.
-Pour connaitre les niveaux d’un facteur, on utilise la fonction levels.
+Pour connaitre les niveaux d’un facteur, on utilise la fonction 'levels'.
 
 ```
 levels(sexe)
