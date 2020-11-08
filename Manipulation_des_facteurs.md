@@ -118,7 +118,10 @@ On peut modifier l’ordre des niveaux d’un facteur existant en utilisant l’
 ```
 sexe <- factor(sexe, levels = c("H", "F"))
 sexe
-Summary(sexe)
+[1] H H F H H F F F
+```
+```
+summary(sexe)
 H F
 4 4
 ```
