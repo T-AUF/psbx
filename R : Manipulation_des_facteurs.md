@@ -20,7 +20,7 @@ Pour illustrer le fonctionnement des facteurs, nous allons créer un facteur ave
 
 **3 fonctions pour créer les facteurs**
  
-**1.	La fonction factor**
+ - **1.	La fonction factor**
 
 `factor` permet de créer un facteur en définissant directement les différents éléments du facteur.
 
@@ -32,7 +32,7 @@ sexe
 Levels : F H
 ```
 
-**2.	La fonction as.factor**
+ - **2.	La fonction as.factor**
 
 ``` 
 salto <- c(1:5,5:1)
@@ -46,7 +46,7 @@ salto.f
 Levels: 1 2 3 4 5
 ```
 
-**3.	La fonction ordered**
+ - **3.	La fonction ordered**
 
 La fonction  `ordered`  va quant à elle nous permettre de créer des facteurs ordonnés
 
@@ -57,10 +57,9 @@ niveau <- ordered(c("débutant","débutant","champion",
 levels=c("débutant","moyen","champion"))
 
 niveau
-
-# [1] débutant débutant champion champion moyen moyen moyen
-# [8] champion
-# Levels: débutant < moyen < champion 
+[1] débutant débutant champion champion moyen moyen moyen
+[8] champion
+Levels: débutant < moyen < champion 
 ```
 
 ### Niveaux d’un facteur
