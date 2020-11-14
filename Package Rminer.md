@@ -16,7 +16,7 @@ Pour utiliser le package Rminer et ses fonctions:
 
 Ci-desous la liste des fonctions du package Rminer. Nous n’allons vous présenter que les fonctions qui nous semblent les plus pertinentes dans ce tutoriat. 
 
-Si vous souhaitez approfondir votre connaissance sur les autres fonctions, nous vous invitons à aller sur la documentation R du package : [LINK](http://cran.r-project.org/web/packages/rminer/index.html)
+Si vous souhaitez approfondir votre connaissance sur les autres fonctions, nous vous invitons à aller sur la documentation R du package : [Lien](http://cran.r-project.org/web/packages/rminer/index.html)
 
 Si vous souhaitez consulter l’aide, taper dans la commande R `help(package=rminer)`
 
@@ -49,7 +49,8 @@ Ce tutoriat se concentra sur les fonctions  suivantes du package Rminer  qui peu
 **1. Data preparation : CasesSeries, delevels**
 
 `CasesSeries` : créer un data frame d’une série temporelle en utilisant la fenêtre glissante.
-######### Fenêtre glissante : (« sliding window ») : Fenêtre temporelle utilisée dans l'exploration des flots de données (« Data stream mining ») pour en extraire des motifs. Les fenêtres peuvent avoir une taille W fixe et la fouille de données s'effectue sur les W dernières transactions, ou sur les W dernières unités de temps, elles peuvent aussi avoir une taille variable, dans la détection de la dérive conceptuelle.
+
+Fenêtre glissante : (« sliding window ») : Fenêtre temporelle utilisée dans l'exploration des flots de données (« Data stream mining ») pour en extraire des motifs. Les fenêtres peuvent avoir une taille W fixe et la fouille de données s'effectue sur les W dernières transactions, ou sur les W dernières unités de temps, elles peuvent aussi avoir une taille variable, dans la détection de la dérive conceptuelle.
  
 ```
 # Exemple
@@ -133,9 +134,7 @@ Par defaut, le type du modèle Rminer (classification ou régression) dépend du
 -	Si c’est un facteur (discret) alors c’est une probabilité de classificaiton 
 -	Si c’est numérique (int, num) alors c’est une régression qui est executée 
 
-Voir tous les mesures de `fit` et `predict`  : 
-- [lien fit](https://rdrr.io/cran/rminer/man/fit.html)
-- [lien predict](https://rdrr.io/cran/rminer/man/predict-methods.html)
+Voir tous les modèles de `fit` et `predict` : [lien fit](https://rdrr.io/cran/rminer/man/fit.html) et [lien predict](https://rdrr.io/cran/rminer/man/predict-methods.html)
 
 ==> METTRE EXEMPLE
 
@@ -144,7 +143,7 @@ Voir tous les mesures de `fit` et `predict`  :
 
 Rminer comprend une large sélection de métriques d’évaluation et de graphes qui peut être utilisée pour évaluer la qualité des modèles ajsutés et extraire les données apprises du modèle data-driven.
 
-    `Mmetric` : fonction qui calcule les erreurs métriques de classification ou régression.
+`Mmetric` : fonction qui calcule les erreurs métriques de classification ou régression.
 Ci-dessous les quelques mesures de `mmetric` : 
 - ALL : sort toutes les mesures de `mmetric`
 - F1 score, [0-100%]
@@ -154,7 +153,7 @@ Ci-dessous les quelques mesures de `mmetric` :
 - ACCLASS : taux d’exactitude de classification par classe, [0-100%]
 - TPR (true positive rate) : c’est la sensibilité, correspondant au taux de vrais positifs, 0-100%]
 
-Voir tous les mesures de `mmetric`  : [lien](https://rdrr.io/cran/rminer/man/mmetric.html)
+Voir tous les modèles de `mmetric`  : [lien](https://rdrr.io/cran/rminer/man/mmetric.html)
 
 ```
 # Exemple 
