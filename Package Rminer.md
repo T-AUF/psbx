@@ -128,7 +128,7 @@ Les fonction `fit` et `predict` proposent plusieurs modèles tels que :
 - rpart (arbre de décision)
 - randomForest
 - lm (régression linéaire ou multiple)
-- cv.glmnet : mdoèle linéaire généralisé
+- cv.glmnet : modèle linéaire généralisé
 
 Par defaut, le type du modèle Rminer (classification ou régression) dépend du type d’output. 
 -	Si c’est un facteur (discret) alors c’est une probabilité de classificaiton 
