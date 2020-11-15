@@ -136,8 +136,18 @@ Par defaut, le type du modèle Rminer (classification ou régression) dépend du
 
 Voir tous les modèles de `fit` et `predict` : [lien fit](https://rdrr.io/cran/rminer/man/fit.html) et [lien predict](https://rdrr.io/cran/rminer/man/predict-methods.html)
 
-==> METTRE EXEMPLE
+```
+# Exemple qui montre comment la transformation fonctionne avec `fit` et `predict`:
+M=fit(y~.,data=sa_ssin,model="mr") # régression linéaire
+P=predict(M,data.frame(x1=-1000,x2=0,x3=0,x4=0,y=NA)) # P devrait être négatif
+print(P)
+`[1] -0.4144042` 
 
+M=fit(y~.,data=sa_ssin,model="mr",transform="positive")
+P=predict(M,data.frame(x1=-1000,x2=0,x3=0,x4=0,y=NA)) # P n'est pas négatif
+print(P)
+`[1] 0` 
+```
 
 **3. Evaluation : mmetric, mgraph, mining**
 
@@ -160,17 +170,17 @@ Voir tous les modèles de `mmetric`  : [lien](https://rdrr.io/cran/rminer/man/mm
 > y=factor(c("a","a","a","a","b","b","b","b"))
 > x=factor(c("a","a","b","a","b","a","b","a"))
 > print(mmetric(y,x,"CONF")$conf)
-      pred
+[1]  pred
 target a b
      a 3 1
      b 2 2
 
 > print(mmetric(y,x,metric=c("ACC","TPR","ACCLASS")))
-     ACC     TPR1     TPR2 ACCLASS1 ACCLASS2 
+[1] ACC     TPR1     TPR2 ACCLASS1 ACCLASS2 
     62.5     75.0     50.0     62.5     62.5 
 
 > print(mmetric(y,x,"ALL"))
-       ACC         CE        BER      KAPPA    CRAMERV   ACCLASS1   ACCLASS2   BAL_ACC1 
+[1]    ACC         CE        BER      KAPPA    CRAMERV   ACCLASS1   ACCLASS2   BAL_ACC1 
 62.5000000 37.5000000 37.5000000 25.0000000  0.0000000 62.5000000 62.5000000 62.5000000 
   BAL_ACC2       TPR1       TPR2       TNR1       TNR2 PRECISION1 PRECISION2        F11 
 62.5000000 75.0000000 50.0000000 50.0000000 75.0000000 60.0000000 66.6666667 66.6666667 
@@ -197,9 +207,11 @@ mgraph(M2,graph="IMP",xval=0.01,leg=c("x1","x2"),
        main="sin1reg Input importance",axis=1)
 mgraph(M2,graph="VEC",xval=1,main="sin1reg 1-D VEC curve for x1")
 mgraph(M2,graph="VEC",xval=1,
-       main="sin1reg 1-D VEC curve and histogram for x1",data=sin1reg)
+       main="sin1reg Courbe et histogramme pour x1",data=sin1reg)
 ```
 => METTRE LE GRAPHE EN IMAGE
+
+![image]()
 
 **Source**
 
