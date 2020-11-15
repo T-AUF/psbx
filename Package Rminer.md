@@ -57,7 +57,7 @@ Fenêtre glissante : (« sliding window ») : Fenêtre temporelle utilisée dans
 > t=1:20
 > d=CasesSeries(1:10,c(1,3,4))
 > print(d)
-  lag4 lag3 lag1  y
+[1] lag4 lag3 lag1  y
 1    1    2    4  5
 2    2    3    5  6
 3    3    4    6  7
@@ -67,7 +67,7 @@ Fenêtre glissante : (« sliding window ») : Fenêtre temporelle utilisée dans
 
 > d=CasesSeries(1:10,c(1,2,3))
 > print(d)
-  lag3 lag2 lag1  y
+[1] lag3 lag2 lag1  y
 1    1    2    3  4
 2    2    3    4  5
 3    3    4    5  6
@@ -84,7 +84,7 @@ Fenêtre glissante : (« sliding window ») : Fenêtre temporelle utilisée dans
 ```
 > f=factor(c("A","A","B","B","C","D","E"))
 > print(table(f))
-f
+[1] f
 A B C D E 
 2 2 1 1 1 
 ```
@@ -92,7 +92,7 @@ A B C D E
 # remplacer "A" en "a":
 > f1=delevels(f,"A","a")
 > print(table(f1))
-f1
+[1] f1
 a B C D E 
 2 2 1 1 1 
 ```
@@ -101,7 +101,7 @@ a B C D E
 # combiner c("C","D","E") en "CDE":
 > f2=delevels(f,c("C","D","E"),"CDE")
 > print(table(f2))
-f2
+[1] f2
   A   B CDE 
   2   2   3 
 ```
@@ -110,7 +110,7 @@ f2
 # combiner c("B","C","D","E") en _OTHER:
 > f3=delevels(f,c("B","C","D","E"))
 > print(table(f3))
-f3
+[1] f3
      A _OTHER 
      2      5 
 ```
@@ -141,12 +141,12 @@ Voir tous les modèles de `fit` et `predict` : [lien fit](https://rdrr.io/cran/r
 M=fit(y~.,data=sa_ssin,model="mr") # régression linéaire
 P=predict(M,data.frame(x1=-1000,x2=0,x3=0,x4=0,y=NA)) # P devrait être négatif
 print(P)
-`[1] -0.4144042` 
+[1] -0.4144042
 
 M=fit(y~.,data=sa_ssin,model="mr",transform="positive")
 P=predict(M,data.frame(x1=-1000,x2=0,x3=0,x4=0,y=NA)) # P n'est pas négatif
 print(P)
-`[1] 0` 
+[1] 0
 ```
 
 **3. Evaluation : mmetric, mgraph, mining**
@@ -211,7 +211,7 @@ mgraph(M2,graph="VEC",xval=1,
 ```
 => METTRE LE GRAPHE EN IMAGE
 
-![image]()
+![image](image locale)
 
 **Source**
 
