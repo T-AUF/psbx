@@ -124,7 +124,7 @@ Les hyperparamètres sont des paramètres réglables qui vous permettent de cont
 
 `Predict` : la fonction donne un modèle ajusté et calcule les prédictions pour un jeu de données
 
-Les fonction `fit` et `predict` proposent plusieurs modèles tels que :
+Les fonctions `fit` et `predict` proposent plusieurs modèles tels que :
 - rpart (arbre de décision)
 - randomForest
 - lm (régression linéaire ou multiple)
