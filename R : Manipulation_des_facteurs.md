@@ -152,9 +152,9 @@ H F
 4 4
 ```
 
-**### Convertir un facteur**
+**Convertir un facteur**
 
-Attention convertir un facteur en numérique peut poser un problème
+⚠️ Convertir un facteur en numérique peut poser un problème
 
 ```
 f<-factor(c(3.4, 1.2, 5))
@@ -173,7 +173,6 @@ Cele retourne un vecteur caratère, la fonction `as.numeric()` reste obligatoire
 ``` 
 f<-levels(f)[f]
 f<-as.numeric(f)
-
 ``` 
 ----------------------------------------------------------------------
 #### **Ce qu'il faut retenir** :
