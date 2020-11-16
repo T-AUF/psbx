@@ -154,7 +154,7 @@ H F
 
 ### Convertir un facteur en numérique
 
-⚠️ Si on souhaite calculer les indicateurs de centralité (moyenne, médiane, quartile etc), il est nécessaire de donvertir un facteur en numérique. Cependant cette étape peut poser problème.
+⚠️ Si on souhaite calculer les indicateurs de centralité (moyenne, médiane, quartile etc), il est nécessaire de convertir un facteur en numérique. Cependant cette étape peut poser problème.
 
 ```
 f<-factor(c(3.4, 1.2, 5))
