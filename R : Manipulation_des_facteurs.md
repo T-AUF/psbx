@@ -178,13 +178,13 @@ levels(f)[f]
 [1] "3.4" "1.2" "5"  
 
 ``` 
-Cele retourne un vecteur caratère, la fonction `as.numeric()` reste obligatoire pour convertir les valeurs dans le bon type numérique.
+Cele retourne un vecteur caractère, la fonction `as.numeric()` reste obligatoire pour convertir les valeurs en type numérique.
 
 ``` 
 f<-levels(f)[f]
 f<-as.numeric(f)
 mean(f)
-[1] 3.2 # maintenant cela fonctionne
+[1] 3.2 # maintenant on peut calculer la moyenne
 ``` 
 ----------------------------------------------------------------------
 #### **Ce qu'il faut retenir** :
