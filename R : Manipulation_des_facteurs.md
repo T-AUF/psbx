@@ -154,14 +154,24 @@ H F
 
 **Convertir un facteur**
 
-⚠️ Convertir un facteur en numérique peut poser un problème
+⚠️ Si on souhaite calculer les indicateurs de centralité (moyenne, médiane, quartile etc), il est nécessaire de donvertir un facteur en numérique. Cependant cette étape peut poser un problème.
+
+```
+f<-factor(c(3.4, 1.2, 5))
+mean(f)
+[1] NA
+Warning message:
+In mean.default(f) :
+  l'argument n'est ni numérique, ni logique : renvoi de NA
+```
+Il est faut convertir en numérique le facteur.
 
 ```
 f<-factor(c(3.4, 1.2, 5))
 as.numeric(f)
 [1] 2 1 3 # cela ne renvoie pas la valeur que l'on souhaite qui est 3.4, 1.2, 5
 ``` 
-Il est recommandé d'utiliser  le vecteur interger en index niveau de facteur comme ci-dessous:
+Il est recommandé d'utiliser  le vecteur interger en index au niveau de facteur comme ci-dessous:
 
 ``` 
 levels(f)[f]
@@ -173,6 +183,8 @@ Cele retourne un vecteur caratère, la fonction `as.numeric()` reste obligatoire
 ``` 
 f<-levels(f)[f]
 f<-as.numeric(f)
+mean(f)
+[1] 3.2 # maintenant cela fonctionne
 ``` 
 ----------------------------------------------------------------------
 #### **Ce qu'il faut retenir** :
