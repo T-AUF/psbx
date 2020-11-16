@@ -16,6 +16,7 @@ Pour encoder les réponses à une question ferme (c'est-à-dire qu'une question 
  
 Pour illustrer le fonctionnement des facteurs, nous allons créer un facteur avec des attributs par défaut, puis des niveaux personnalisés, puis des niveaux et des étiquettes personnalisés.
 
+
 ### Création des facteurs
 
 **3 fonctions pour créer les facteurs**
@@ -27,23 +28,26 @@ Pour illustrer le fonctionnement des facteurs, nous allons créer un facteur ave
 ``` 
 sexe <- factor(c("H", "H", "F", "H", "H", "F", "F", "F") 
 sexe
-
 [1] H H F H H F F F
-Levels : F H
+
+class(sexe)
+[1] factor
+
 ```
 
  - **2.	La fonction `as.factor`**
 
 ``` 
-salto <- c(1:5,5:1)
+salto <- c(1:5,5:1) # création d'un vecteur
 salto
 [1] 1 2 3 4 5 5 4 3 2 1
 
-salto.f <- as.factor(salto)
+salto.f <- as.factor(salto) # transformer le vecteur en facteur
 salto.f
-
 [1] 1 2 3 4 5 5 4 3 2 1
-Levels: 1 2 3 4 5
+
+levels(salto.f)
+[1]: 1 2 3 4 5
 ```
 
  - **3.	La fonction `ordered`**
@@ -53,8 +57,7 @@ La fonction  `ordered`  va quant à elle nous permettre de créer des facteurs o
 ```
 niveau <- ordered(c("débutant","débutant","champion",
                     "champion","moyen","moyen","moyen",
-                    "champion"),
-levels=c("débutant","moyen","champion"))
+                    "champion"), levels=c("débutant","moyen","champion"))
 
 niveau
 [1] débutant débutant champion champion moyen moyen moyen
@@ -69,9 +72,10 @@ Pour connaitre les niveaux d’un facteur, on utilise la fonction 'levels'.
 
 ```
 levels(sexe)
-```
-```
-[1] “F” “H”
+[1] F H # niveau du facteur
+
+nlevels(sexe)
+[1] 2 # nombre de facteurs
 ```
 
 _Remarque_ : R affiche les niveaux d’un facteur sous forme de caractère. Cependant, en interne, R les stocke sous forme d’entiers (dans notre exemple 2=“H” et 1=“F”).
@@ -148,6 +152,29 @@ H F
 4 4
 ```
 
+**### Convertir un facteur**
+
+Attention convertir un facteur en numérique peut poser un problème
+
+```
+f<-factor(c(3.4, 1.2, 5))
+as.numeric(f)
+[1] 2 1 3 # cela ne renvoie pas la valeur que l'on souhaite qui est 3.4, 1.2, 5
+``` 
+Il est recommandé d'utiliser  le vecteur interger en index niveau de facteur comme ci-dessous:
+
+``` 
+levels(f)[f]
+[1] "3.4" "1.2" "5"  
+
+``` 
+Cele retourne un vecteur caratère, la fonction `as.numeric()` reste obligatoire pour convertir les valeurs dans le bon type numérique.
+
+``` 
+f<-levels(f)[f]
+f<-as.numeric(f)
+
+``` 
 ----------------------------------------------------------------------
 #### **Ce qu'il faut retenir** :
 - 3 moyens de créer des facteurs : `factor`, `as.factor` et `ordered`
