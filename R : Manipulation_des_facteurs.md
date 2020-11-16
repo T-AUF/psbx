@@ -171,7 +171,7 @@ f<-factor(c(3.4, 1.2, 5))
 as.numeric(f)
 [1] 2 1 3 # cela ne renvoie pas la valeur que l'on souhaite qui est 3.4, 1.2, 5
 ``` 
-Il est recommandé d'utiliser  le vecteur interger en index au niveau de facteur comme ci-dessous:
+Il est recommandé d'utiliser  le vecteur integer en index au niveau de facteur comme ci-dessous:
 
 ``` 
 levels(f)[f]
