@@ -5,5 +5,5 @@ Master PSB DM 2020-2022: cours R
 	2) Packages R: tutoriat sur les packages
 		- evd
 		- evir
-		- r.miner
+		- rminer
 		- graphics
