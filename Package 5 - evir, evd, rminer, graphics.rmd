@@ -758,15 +758,17 @@ Voir tous les modèles de `fit` et `predict` : [lien fit](https://rdrr.io/cran/r
 
 # Exemple qui montre comment la transformation fonctionne avec `f i t` et `predict`
 ```{r}
-M = fit(y ~. , data=sa_ssin , model="mr ") # régression linéaire
-P = predict(M, data.frame( x1=−1000,x2=0 ,x3=0 ,x4=0 ,y=NA) ) # P devrait être négatif
+M=fit(y~.,data=sa_ssin,model="mr") # régression linéaire
+P=predict(M,data.frame(x1=-1000,x2=0,x3=0,x4=0,y=NA))  # P devrait être négatif
+print(P)
 ```
 ```
 [1]    −0.4144042
 ```
 ```{r}
-M = fit(y ~., data=sa_ssin, model="mr", transform ="positive")
-P = predict(M, data.frame( x1=−1000,x2=0 ,x3=0 ,x4=0 ,y=NA) ) # P n’est pas négatif
+M=fit(y~.,data=sa_ssin,model="mr",transform="positive")
+P=predict(M,data.frame(x1=-1000,x2=0,x3=0,x4=0,y=NA))  # P n’est pas négatif
+print(P)
 ```
 ```
 [1]    0
