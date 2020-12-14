@@ -59,7 +59,7 @@ Quant-à
 
 ##### **Les fonctions d'Evir et Evd**
 
-Ici nous allons recenser certaines fonctions qui peuvent être utilisées dans ces deux packages, commençont par $Evir$.
+Ici nous allons recenser certaines fonctions qui peuvent être utilisées dans ces deux packages, commençons par $Evir$.
 
 ##### **Listes des fonctions de Evir**
 
