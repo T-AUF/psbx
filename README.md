@@ -7,3 +7,5 @@ Master PSB DM 2020-2022: cours R
 		- evir
 		- rminer
 		- graphics
+		
+	3) Dossier maths sur l'analyse de 3 papiers
